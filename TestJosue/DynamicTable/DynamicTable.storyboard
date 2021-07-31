@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dynamic Table Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="DynamicTableController" customModule="TestJosue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uNi-7p-c7V">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="oGv-h1-BKU"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="U5g-71-fMA"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="JBm-fg-AzV">
+                                <rect key="frame" x="188.5" y="451.5" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="AXh-Ah-956"/>
+                                    <constraint firstAttribute="width" constant="37" id="Puw-dA-Mbz"/>
+                                </constraints>
+                                <color key="color" systemColor="systemBlueColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uNi-7p-c7V" secondAttribute="trailing" id="7dw-T0-tHz"/>
+                            <constraint firstItem="uNi-7p-c7V" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BYJ-Ku-6Nd"/>
+                            <constraint firstItem="JBm-fg-AzV" firstAttribute="centerY" secondItem="uNi-7p-c7V" secondAttribute="centerY" id="SlF-IU-oN6"/>
+                            <constraint firstItem="uNi-7p-c7V" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="TPM-Il-gbV"/>
+                            <constraint firstAttribute="bottom" secondItem="uNi-7p-c7V" secondAttribute="bottom" id="bWg-eT-0qQ"/>
+                            <constraint firstItem="JBm-fg-AzV" firstAttribute="centerX" secondItem="uNi-7p-c7V" secondAttribute="centerX" id="lA8-7H-30Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dymanicTableView" destination="uNi-7p-c7V" id="Xcg-ht-k9k"/>
+                        <outlet property="loadingIndicator" destination="JBm-fg-AzV" id="yBI-Dj-COy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="46.875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
